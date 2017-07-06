@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<title>Formulário</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default ">
+			<div class="container-fluid">
+				 <!-- toggle menu burger -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barranav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<!-- <span class="icon-bar"></span> -->
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logo_p.png" alt="" />
+					</a>
+				</div>
+			 <!-- itens da barra de nav para o toggle  -->
+				<div class="collapse navbar-collapse" id="barranav">
+					<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#myModal">Entre</button>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Como funciona</a></li>
+						<li><a href="#">Quem Somos</a></li>
+						<li><a href="#">Parceiros</a></li>
+						<li><a href="#footer">Contato</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</header>
+		<!-- multi step form -->
+		<form id="msform">
+			<!-- progress bar -->
+			<ul id="progressbar">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<!-- fieldsets -->
+			<fieldset>
+				<h2 class="fs-titulo">Crie sua conta</h2>
+				<input type="text" name="nome" placeholder="Nome Completo" required="required" />
+				<input type="text" name="cpf" placeholder="CPF" required="required" />
+				<input type="email" name="email" placeholder="Email" required="required" />
+				<input type="text" name="tel-cel" placeholder="Celular" required="required" />
+				<h3 class="fs-subtitulo">Cadastre sua senha  <span class="glyphicon glyphicon-info-sign" aria-hidden="true" data-toggle="popover" data-content="A senha deve ter pelo menos 1 letra, 1 numeral e no mínimo X caracteres"></span></h3>
+				<input type="password" name="pwd" placeholder="Senha" required="required" />
+				<input type="password" name="cpwd" placeholder="Confirme sua Senha" required="required" />
+				<input type="checkbox" name="cadastro-rapido" id="cadastro-rapido"/>
+				<span>Cadastro Rápido</span><br></br>
+
+				<!-- <input type="date" name="data-nasc" placeholder="Data de Nascimento"> -->
+				<!-- <input type="text" name="tel-res" placeholder="Telefone Residencial">
+				<input type="text" name="tel-com" placeholder="Telefone Comercial"> -->
+				<input type="button" name="next" class="next action-button" id="btn-proximo" value="Próximo" />				
+				<input type="submit" name="submit" class="submit action-button" id="btn-salvar" value="Salvar" />	
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-titulo">Código de Segurança</h2>
+				
+				<input type="text" name="cod-seguranca" placeholder="Digite aqui o código de segurança" id="cod-seguranca" required="required" />
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="button" name="next" class="next action-button" id="btn-codigo" value="Próximo" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-titulo">Endereço</h2>
+				<input type="text" id="cep" name="cep" placeholder="CEP" />
+				<input type="text" id="tp-logradouro" name="tp-logradouro" placeholder="Tipo Logradouro" />
+				<input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" />
+				<input type="text" id="numero" name="numero" placeholder="Número" />
+				<input type="text" id="complemento" name="complemento" placeholder="Complemento" />
+				<input type="text" id="bairro" name="bairro" placeholder="Bairro" />
+				<input type="text" id="cidade" name="cidade" placeholder="Cidade" class="msm-linha" />
+<!-- 				<input type="text" name="estado" placeholder="Estado" class="msm-linha" /> -->
+				<select id="estado" name="estado" class="msm-linha" >
+					<option value=''>selecione ...</option>
+				</select>
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="button" name="next" class="next action-button" value="Próximo" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-titulo">Crie sua conta</h2>
+				<h3 class="fs-subtitulo">Financeiro</h3>
+				<input type="text" name="banco" placeholder="Banco" />
+				<input type="text" name="agencia" placeholder="Agência" />
+				<input type="text" name="tipo-conta" placeholder="Tipo de Conta" />
+				<input type="text" name="num-conta" placeholder="Númedo da Conta" />
+				<input type="button" name="estabelecimento" class="" value="Estabelecimento" />
+				<input type="button" name="inc-alterar" class="" value="Incluir/Alterar" />
+				<input type="button" name="previous" class="previous action-button" value="Anterior" />
+				<input type="submit" name="submit" class="submit action-button" id="salva" value="Salvar" />				
+			</fieldset>			
+		</form>
+
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/jquery-easing.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/ms-form.js" type="text/javascript"></script>
+</body>
+</html>
